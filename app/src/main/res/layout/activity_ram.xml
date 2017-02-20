@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_storage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.vadim.batterymanajer.Storage">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+            <ProgressBar
+
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/pbRAM"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:background="@drawable/circle_shape"
+                android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true"
+                android:clickable="true" />
+
+            <TextView
+                android:text="%"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/tvProc"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_horizontal"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Used"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:gravity="right"
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:text="free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvFree"
+                android:gravity="right"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:text="NoFree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvNoFree"
+                android:gravity="right"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:text="total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTotal"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:layout_marginRight="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@android:color/darker_gray"
+        android:layout_height="25dp">
+
+        <TextView
+            android:text="Background Applications"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView14"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list" />
+    </LinearLayout>
+
+</LinearLayout>
+
